@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-import pandas as pd
 import argparse
+import pandas as pd
 
 
 # Ctr по данным исследования OverLead https://overlead.me/blog/ctr-na-vydache-yandeksa-ot-2019-goda/
@@ -46,8 +46,8 @@ def get_ctr10(pos):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='')
-    parser.add_argument('-f', action='store', dest='keysso_csv', help='Keys.so CSV file')
-    parser.add_argument('-o', action='store', dest='output_csv', help='Output CSV file')
+    parser.add_argument('-f', action='store', dest='keysso_csv', help='Keys.so CSV file', required=True)
+    parser.add_argument('-o', action='store', dest='output_csv', help='Output CSV file', required=True)
 
     args = parser.parse_args()
 
